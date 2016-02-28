@@ -17,6 +17,7 @@ namespace Zolla.Web.Controllers
         private ZollaDbContext db = new ZollaDbContext();
 
         // GET: Orders
+        
         public async Task<ActionResult> Index()
         {
             var orders = db.Orders.Include(o => o.Client).ToListAsync();
