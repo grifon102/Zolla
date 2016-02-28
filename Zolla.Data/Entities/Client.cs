@@ -14,6 +14,7 @@ namespace Zolla.Data.Entities
         public string Name { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy H:mm:ss}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
+        [Display(Name = "Дата добавления")]
         public DateTime DateAdd { get; set; }
         
         public virtual IList<Order> Orders { get; set; }

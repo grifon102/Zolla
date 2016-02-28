@@ -1,13 +1,11 @@
 ﻿@model IEnumerable<Zolla.Data.Entities.Client>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
+
+<h2>Клиенты</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Добавить нового клиента", "Create", null,new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
@@ -30,9 +28,10 @@
             @Html.DisplayFor(modelItem => item.DateAdd)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            
+            @Html.ActionLink("редактировать", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("инфо", "Details", new { id=item.Id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("удалить", "Delete", new { id=item.Id }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

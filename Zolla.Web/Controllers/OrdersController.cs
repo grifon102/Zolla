@@ -66,7 +66,7 @@ namespace Zolla.Web.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ClientId = new SelectList(db.Clients, "Id", "FirstName", order.ClientId);
+            ViewBag.ClientId = new SelectList(db.Clients, "Id", "Name", order.ClientId);
             return View(order);
         }
 
@@ -82,7 +82,7 @@ namespace Zolla.Web.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ClientId = new SelectList(db.Clients, "Id", "FirstName", order.ClientId);
+            ViewBag.ClientId = new SelectList(db.Clients, "Id", "Name", order.ClientId);
             return View(order);
         }
 
@@ -99,7 +99,7 @@ namespace Zolla.Web.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.ClientId = new SelectList(db.Clients, "Id", "FirstName", order.ClientId);
+            ViewBag.ClientId = new SelectList(db.Clients, "Id", "Name", order.ClientId);
             return View(order);
         }
 

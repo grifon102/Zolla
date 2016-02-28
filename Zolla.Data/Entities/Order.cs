@@ -9,10 +9,14 @@ namespace Zolla.Data.Entities
 {
     public enum Status
     {
+        [Display(Name = "Новый")]
         New = 1,
+        [Display(Name = "Обработанно")]
         Processed = 2,
+        [Display(Name = "Готов")]
         Ready = 3,
-        Cancelled= 4
+        [Display(Name = "Отменен")]
+        Cancelled = 4
     }
 
     public class Order

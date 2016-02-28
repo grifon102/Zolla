@@ -48,6 +48,10 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Calabonga.Xml.Exports, Version=1.1.4426.23975, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XmlExport.0.2.1\lib\net40\Calabonga.Xml.Exports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -177,9 +181,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ZollaDbContext.cs" />
-    <Compile Include="Migrations\201602281644564_First.cs" />
-    <Compile Include="Migrations\201602281644564_First.Designer.cs">
-      <DependentUpon>201602281644564_First.cs</DependentUpon>
+    <Compile Include="Migrations\201602281854342_First.cs" />
+    <Compile Include="Migrations\201602281854342_First.Designer.cs">
+      <DependentUpon>201602281854342_First.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -265,6 +269,7 @@
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
     <Content Include="Views\Orders\_Orders.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,8 +285,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602281644564_First.resx">
-      <DependentUpon>201602281644564_First.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602281854342_First.resx">
+      <DependentUpon>201602281854342_First.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
