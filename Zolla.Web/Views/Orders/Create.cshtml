@@ -2,7 +2,7 @@
 
 
 
-<h2>Создать</h2>
+<h2>Создать заказ</h2>
 
 
 @using (Html.BeginForm()) 
@@ -10,7 +10,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Order</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ClientId, "ClientId", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ClientId, "Имя клиента", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("ClientId", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ClientId, "", new { @class = "text-danger" })
@@ -39,14 +39,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="создать" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
-<div class="btn btn-default">
-    @Html.ActionLink("На главную", "Index")
+<div>
+    @Html.ActionLink("На главную", "Index",null,new {@class ="btn btn-warning" })
 </div>
 
 @section Scripts {
