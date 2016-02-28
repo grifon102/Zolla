@@ -13,7 +13,7 @@ namespace Zolla.Web.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201602280931276_First"; }
+            get { return "201602281644564_First"; }
         }
         
         string IMigrationMetadata.Source

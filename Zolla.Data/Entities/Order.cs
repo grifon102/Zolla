@@ -9,10 +9,10 @@ namespace Zolla.Data.Entities
 {
     public enum Status
     {
-        New,
-        Processed,
-        Ready,
-        Cancelled
+        New = 1,
+        Processed = 2,
+        Ready = 3,
+        Cancelled= 4
     }
 
     public class Order

@@ -12,8 +12,7 @@ namespace Zolla.Web.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        Name = c.String(),
                         DateAdd = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);

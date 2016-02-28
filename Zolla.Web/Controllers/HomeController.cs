@@ -12,10 +12,27 @@ namespace Zolla.Web.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+
+            if (Request.IsAjaxRequest())
+            {
+                return Json(new { result = "Привет get Ajax" }, JsonRequestBehavior.AllowGet);
+            }
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult About(string val)
+        {
+            ViewBag.Message = "Your application description page.";
+
+            if (Request.IsAjaxRequest())
+            {
+                return Json(new { result = "Привет "+ val});
+            }
 
             return View();
         }

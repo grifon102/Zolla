@@ -19,8 +19,14 @@ namespace Zolla.Web.Controllers
         // GET: Orders
         public async Task<ActionResult> Index()
         {
-            var orders = db.Orders.Include(o => o.Client);
-            return View(await orders.ToListAsync());
+            var orders = db.Orders.Include(o => o.Client).ToListAsync();
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView(await orders);
+            }
+
+            return View(await orders);
         }
 
         // GET: Orders/Details/5
@@ -41,7 +47,8 @@ namespace Zolla.Web.Controllers
         // GET: Orders/Create
         public ActionResult Create()
         {
-            ViewBag.ClientId = new SelectList(db.Clients, "Id", "FirstName");
+            ViewBag.ClientId = new SelectList(db.Clients, "Id", "Name");
+            
             return View();
         }
 
